@@ -12,3 +12,9 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+/.idea/.gitignore
+/.idea/dotfiles.iml
+/.idea/git_toolbox_prj.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml

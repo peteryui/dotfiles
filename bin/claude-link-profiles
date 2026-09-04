@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Share ~/.claude/CLAUDE.md and ~/.claude/rules across every Claude Code
+# profile directory (~/.claude-*), so one edit reaches all accounts.
+set -euo pipefail
+for dir in "$HOME"/.claude-*/; do
+	[ -d "$dir" ] || continue
+	for item in CLAUDE.md rules; do
+		if [ ! -e "$dir$item" ]; then
+			ln -s "$HOME/.claude/$item" "$dir$item"
+			echo "linked $dir$item"
+		fi
+	done
+done
